@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 // Simple hello world route
 app.get('/', function(req, res) {
-    res.send("Hello class");
+    res.send("Hello world");
 });
 
 var posts = [
