@@ -1,4 +1,5 @@
 var express = require('express');
+var cors = require('cors');
 var bodyParser = require('body-parser');
 var app = express();
 
@@ -7,7 +8,7 @@ app.set('port', (process.env.PORT || 80));
 
 // bodyParser needs to be configured for parsing JSON from HTTP body
 app.use(bodyParser.json());
-
+app.use(cors());
 
 // Simple hello world route
 app.get('/', function(req, res) {
